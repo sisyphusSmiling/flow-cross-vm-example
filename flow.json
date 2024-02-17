@@ -60,6 +60,12 @@
 				"emulator": "f8d6e0586b0a20c7"
 			}
 		},
+		"IEVMBridgeNFTLocker": {
+			"source": "./cadence/contracts/bridge/IEVMBridgeNFTLocker.cdc",
+			"aliases": {
+				"emulator": "f8d6e0586b0a20c7"
+			}
+		},
 		"IFlowEVMNFTBridge": {
 			"source": "./cadence/contracts/bridge/IFlowEVMNFTBridge.cdc",
 			"aliases": {
@@ -131,7 +137,8 @@
 				},
 				"CrossVMAsset",
 				"CrossVMNFT",
-				"IFlowEVMNFTBridge"
+				"IFlowEVMNFTBridge",
+				"IEVMBridgeNFTLocker"
 			],
 			"emulator-flow": [
 				"FlowToken"
