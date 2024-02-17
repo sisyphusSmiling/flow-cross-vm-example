@@ -1,7 +1,31 @@
 {
 	"contracts": {
+		"CrossVMAsset": {
+			"source": "./cadence/contracts/bridge/CrossVMAsset.cdc",
+			"aliases": {
+				"emulator": "f8d6e0586b0a20c7"
+			}
+		},
+		"CrossVMNFT": {
+			"source": "./cadence/contracts/bridge/CrossVMNFT.cdc",
+			"aliases": {
+				"emulator": "f8d6e0586b0a20c7"
+			}
+		},
 		"EVM": {
 			"source": "./cadence/contracts/standards/EVM.cdc",
+			"aliases": {
+				"emulator": "f8d6e0586b0a20c7"
+			}
+		},
+		"FlowEVMBridgeConfig": {
+			"source": "./cadence/contracts/bridge/FlowEVMBridgeConfig.cdc",
+			"aliases": {
+				"emulator": "f8d6e0586b0a20c7"
+			}
+		},
+		"FlowEVMBridgeUtils": {
+			"source": "./cadence/contracts/bridge/FlowEVMBridgeUtils.cdc",
 			"aliases": {
 				"emulator": "f8d6e0586b0a20c7"
 			}
@@ -28,6 +52,18 @@
 				"emulator": "f8d6e0586b0a20c7",
 				"mainnet": "f233dcee88fe0abe",
 				"testnet": "9a0766d93b6608b7"
+			}
+		},
+		"ICrossVM": {
+			"source": "./cadence/contracts/bridge/ICrossVM.cdc",
+			"aliases": {
+				"emulator": "f8d6e0586b0a20c7"
+			}
+		},
+		"IFlowEVMNFTBridge": {
+			"source": "./cadence/contracts/bridge/IFlowEVMNFTBridge.cdc",
+			"aliases": {
+				"emulator": "f8d6e0586b0a20c7"
 			}
 		},
 		"MetadataViews": {
@@ -81,13 +117,27 @@
 				"NonFungibleToken",
 				"ViewResolver",
 				"MetadataViews",
-				"FungibleTokenMetadataViews"
-			],
-			"emulator-ft": [
-				"FungibleToken"
+				"FungibleTokenMetadataViews",
+				"ICrossVM",
+				"FlowEVMBridgeConfig",
+				{
+					"name": "FlowEVMBridgeUtils",
+					"args": [
+						{
+							"type": "String",
+							"value": "0000000000000000000000000000000000000001"
+						}
+					]
+				},
+				"CrossVMAsset",
+				"CrossVMNFT",
+				"IFlowEVMNFTBridge"
 			],
 			"emulator-flow": [
 				"FlowToken"
+			],
+			"emulator-ft": [
+				"FungibleToken"
 			]
 		}
 	}
